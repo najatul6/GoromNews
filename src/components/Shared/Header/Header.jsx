@@ -1,7 +1,11 @@
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div>
+      <div className="flex justify-center items-center">
+        <img src="/GoromNews.png" alt="" />
+      </div>
+    </div>
   )
 }
 
