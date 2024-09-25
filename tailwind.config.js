@@ -8,6 +8,7 @@ export default {
       },
       fontFamily: {
         Montserrat: '"Montserrat", sans-serif',
+        Sofadi: '"Sofadi One", system-ui',
       },
     },
   },
