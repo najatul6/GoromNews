@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const menu = (
@@ -10,7 +10,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center"
+            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
         }
       >
         Home
@@ -22,7 +22,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center"
+            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
         }
       >
         About
@@ -34,7 +34,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : "py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center"
+            : "py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
         }
       >
         Career
@@ -72,13 +72,18 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-3">{menu}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end space-x-4">
         <div className="avatar">
           <div className="ring-primary ring-offset-base-100 w-8 rounded-full ring ring-offset-2">
-            <img src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" alt="user profile image" />
+            <img
+              src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png"
+              alt="user profile image"
+            />
           </div>
         </div>
-        <a className="btn btn-sm">Button</a>
+        <Link to="/login" className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center">
+          Log In
+        </Link>
       </div>
     </div>
   );
