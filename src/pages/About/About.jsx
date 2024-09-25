@@ -110,34 +110,41 @@ const About = () => {
             </h2>
             <hr />
           </div>
-          <Marquee speed={100} gradientWidth={200} gradientColor="248,251,253">
+          <Marquee speed={200} gradient={true} gradientWidth={200}>
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEBqY7f7EhATfJYas1jMFZsFD8HbpSpCf9w&s"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAf9GC-DsJ71NfLbTj3Doh3mZdIiU_FT-Y6x1zqKT4uIc7T5_cU4v2d_zGGD2qthNvasE&usqp=CAU"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvmxygP_C7YkVruckjBV7CNFSFUApJ33Znw&s"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqGF6ssNcRTmOXj9p9yfNmY3ANz932_CW2LA&s"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBsaRHDmSDKBP22Gik9AU5jFif9j6t0s1lReS5AJQkpwr-5QmfFvo3XCZYD2WFKOMrDEA&usqp=CAU"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwiExQ3x-h3ug2XD6nwCh7dvO06xyudJPqSkmQpAH1ODKJTjwOZVcPB8bL0pVo3dU7GRs&usqp=CAU"
               alt="Ranker company profile"
+              className="mx-4"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-n7-B0jxspHkaVUvanf0Np0yKAHX2D34BGDJTYaGqFyzRqSYJILcJWAXUXOuy_QAL-vY&usqp=CAU"
               alt="Ranker company profile"
+              className="mx-4"
             />
           </Marquee>
         </section>
