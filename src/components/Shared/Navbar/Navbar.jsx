@@ -9,8 +9,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
+            ? "py-3 px-3 bg-zinc-200 font-bold text-center"
+            : " py-3 px-3 hover:bg-zinc-200 font-semibold text-center duration-300"
         }
       >
         Home
@@ -21,8 +21,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : " py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
+            ? "py-3 px-3 bg-zinc-200 font-bold text-center"
+            : " py-3 px-3 hover:bg-zinc-200 font-semibold text-center duration-300"
         }
       >
         About
@@ -33,8 +33,8 @@ const Navbar = () => {
           isPending
             ? "pending"
             : isActive
-            ? "py-3 px-3 bg-zinc-200 font-bold rounded-xl text-center"
-            : "py-3 px-3 hover:bg-zinc-200 font-semibold rounded-xl text-center duration-300"
+            ? "py-3 px-3 bg-zinc-200 font-bold text-center"
+            : "py-3 px-3 hover:bg-zinc-200 font-semibold text-center duration-300"
         }
       >
         Career
@@ -81,8 +81,11 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <Link to="/login" className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center">
-          Log In
+        <Link
+          to="/login"
+          className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center"
+        >
+          Login
         </Link>
       </div>
     </div>
