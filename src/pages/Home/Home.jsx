@@ -7,9 +7,11 @@ import RightSide from "../../components/Shared/RightSide/RightSide";
 const Home = () => {
   return (
     <div>
-      <Header />
-      <BreakingNews/>
-      <Navbar />
+      <div className="mb-5">
+        <Header />
+        <BreakingNews />
+        <Navbar />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
           <RightSide />
