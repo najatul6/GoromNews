@@ -1,4 +1,5 @@
 import BreakingNews from "../../components/BreakingNews/BreakingNews";
+import Footer from "../../components/Shared/Footer/Footer";
 import Header from "../../components/Shared/Header/Header";
 import Navbar from "../../components/Shared/Navbar/Navbar";
 
@@ -11,6 +12,7 @@ const About = () => {
         <Navbar />
       </div>
       About
+      <Footer/>
     </div>
   );
 };
