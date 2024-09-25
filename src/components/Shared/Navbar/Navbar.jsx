@@ -63,7 +63,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content space-y-3 bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {menu}
           </ul>
@@ -73,6 +73,11 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 space-x-3">{menu}</ul>
       </div>
       <div className="navbar-end">
+        <div className="avatar">
+          <div className="ring-primary ring-offset-base-100 w-8 rounded-full ring ring-offset-2">
+            <img src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" alt="user profile image" />
+          </div>
+        </div>
         <a className="btn btn-sm">Button</a>
       </div>
     </div>
