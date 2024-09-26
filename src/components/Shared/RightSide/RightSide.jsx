@@ -1,7 +1,12 @@
+import AllCategory from "../../AllCategory/AllCategory"
 
 const RightSide = () => {
   return (
-    <div>RightSide</div>
+    <div>
+      <div>
+        <AllCategory/>
+      </div>
+    </div>
   )
 }
 

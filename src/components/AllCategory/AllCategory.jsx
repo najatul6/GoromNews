@@ -10,8 +10,10 @@ const AllCategory = () => {
         .catch(err=>console.log(err))
     },[])
   return (
-    <div>
-
+    <div className="flex flex-col justify-center items-center gap-4">
+        {categories.map((category)=>(
+            <div key={category.id}>{category?.category}</div>
+        ))}
     </div>
   )
 }
