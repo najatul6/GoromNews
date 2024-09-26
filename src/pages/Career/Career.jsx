@@ -45,10 +45,10 @@ const Career = () => {
             </div>
             <div>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpnX4N8-nljXdMfNxqaeSXjAe8S5rUuRtFlw&s"
+                src="https://thediversitymovement.com/wp-content/uploads/2024/01/iStock-1481369283-1024x576.jpg"
                 alt="Culture"
-                className="rounded-lg shadow-md"
-              />
+                className="rounded-lg shadow-md w-full"
+               />
             </div>
           </div>
         </div>
