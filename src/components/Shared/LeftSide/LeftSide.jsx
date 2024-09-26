@@ -4,11 +4,11 @@ import { FcGoogle } from "react-icons/fc";
 const LeftSide = () => {
   return (
     <div>
-      <div className="w-full">
+      <div className="w-full space-y-5">
         <h2 className="text-xl font-bold">Login With</h2>
-        <div>
-          <button className="btn w-full btn-outline"><FcGoogle /> Login with Google</button>
-          <button className="btn w-full btn-outline"><FaFacebook /> Login with Facebook</button>
+        <div className="w-full space-y-5">
+          <button className="btn btn-outline"><FcGoogle /> Login with Google</button>
+          <button className="btn btn-outline"><FaFacebook /> Login with Facebook</button>
         </div>
       </div>
     </div>
