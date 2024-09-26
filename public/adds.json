@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Tech Gadget Sale",
+      "img": "https://via.placeholder.com/300x250?text=Tech+Sale",
+      "link": "https://example.com/tech-sale",
+      "alt": "Tech Gadget Sale Ad",
+      "description": "Get the latest tech gadgets at discounted prices!"
+    },
+    {
+      "id": 2,
+      "title": "Travel the World",
+      "img": "https://via.placeholder.com/300x250?text=Travel+Ad",
+      "link": "https://example.com/travel",
+      "alt": "Travel the World Ad",
+      "description": "Explore new destinations with our exclusive travel deals."
+    },
+    {
+      "id": 3,
+      "title": "Fitness Gear Discount",
+      "img": "https://via.placeholder.com/300x250?text=Fitness+Ad",
+      "link": "https://example.com/fitness",
+      "alt": "Fitness Gear Ad",
+      "description": "Stay in shape with our top-notch fitness gear at unbeatable prices."
+    },
+    {
+      "id": 4,
+      "title": "Home Improvement Specials",
+      "img": "https://via.placeholder.com/300x250?text=Home+Improvement+Ad",
+      "link": "https://example.com/home-improvement",
+      "alt": "Home Improvement Ad",
+      "description": "Upgrade your home with our home improvement deals!"
+    },
+    {
+      "id": 5,
+      "title": "Luxury Cars for Sale",
+      "img": "https://via.placeholder.com/300x250?text=Luxury+Cars+Ad",
+      "link": "https://example.com/luxury-cars",
+      "alt": "Luxury Cars Ad",
+      "description": "Drive in style with our collection of luxury cars at special prices."
+    }
+  ]
