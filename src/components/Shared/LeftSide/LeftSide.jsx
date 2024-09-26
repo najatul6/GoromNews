@@ -7,7 +7,7 @@ const LeftSide = () => {
         <h2>Login With</h2>
         <div>
           <button className="btn "><FcGoogle /> Login with Google</button>
-          <button className="btn ">Login with Facebook</button>
+          <button className="btn "><FaFacebook /> Login with Facebook</button>
         </div>
       </div>
     </div>
