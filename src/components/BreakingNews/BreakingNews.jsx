@@ -15,7 +15,7 @@ const BreakingNews = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        const articleTitles = data.articles.map((article) => article.title); // Extract titles
+        const articleTitles = data.articles.slice(0,4).map((article) => article.title); // Extract titles
         setHeadlines(articleTitles); // Set the titles into state
       })
       .catch((error) => {
