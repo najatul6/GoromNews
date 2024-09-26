@@ -31,7 +31,7 @@ const Advertise = () => {
               className="w-full h-auto rounded-lg hover:opacity-80 transition-opacity duration-200"
             />
             {/* Tooltip */}
-            <div className="absolute bottom-0 left-0 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-1 group-hover:translate-y-0">
+            <div className="absolute top-0 left-0 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-1 group-hover:translate-y-0">
               {ad.title}
             </div>
           </a>
