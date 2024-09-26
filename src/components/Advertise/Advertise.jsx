@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 const Advertise = () => {
   const [ads, setAds] = useState([]);
+  
   useEffect(() => {
-    fetch("/adds.json")
+    fetch("/ads.json")
       .then((response) => response.json())
       .then((data) => setAds(data))
       .catch((error) => console.error("Error:", error));
@@ -19,15 +20,20 @@ const Advertise = () => {
           <a
             key={ad.id}
             href={ad.link}
+            title={ad.title}
             target="_blank"
             rel="noopener noreferrer"
-            className="block"
+            className="block relative group"
           >
             <img
               src={ad.img}
               alt={ad.alt}
               className="w-full h-auto rounded-lg hover:opacity-80 transition-opacity duration-200"
             />
+            {/* Tooltip */}
+            <div className="absolute bottom-0 left-0 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-1 group-hover:translate-y-0">
+              {ad.title}
+            </div>
           </a>
         ))}
       </div>
