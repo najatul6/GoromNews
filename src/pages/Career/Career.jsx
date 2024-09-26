@@ -104,7 +104,7 @@ const Career = () => {
             {/* Story 1 */}
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://e0.365dm.com/22/01/768x432/skysports-ssn-kaveh-transfer_5632590.jpg?20220104165312"
                 alt="Employee 1"
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
@@ -122,7 +122,7 @@ const Career = () => {
             {/* Story 2 */}
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0HBJD62l1cCRUMOUDywZYkjf1CWaOWzcU5Q&s"
                 alt="Employee 2"
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
@@ -140,7 +140,7 @@ const Career = () => {
             {/* Story 3 */}
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
-                src="https://via.placeholder.com/150"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRumQJKleL7aulFNwlCpkOg5hX5veXu3cammg&s"
                 alt="Employee 3"
                 className="w-24 h-24 rounded-full mx-auto mb-4"
               />
