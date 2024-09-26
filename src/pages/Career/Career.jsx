@@ -113,8 +113,8 @@ const Career = () => {
               </h3>
               <p className="text-gray-600 text-center mb-4">Senior Reporter</p>
               <p className="text-gray-500 text-sm text-center">
-              &quot;Working at GoromNews has been a life-changing experience. I’ve
-                grown both professionally and personally, and I’m proud to be
+              &quot;Working at GoromNews has been a life-changing experience. I&#39;ve
+                grown both professionally and personally, and I&#39;m proud to be
                 part of such an innovative team.&quot;
               </p>
             </div>
