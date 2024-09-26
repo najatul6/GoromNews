@@ -10,9 +10,9 @@ const AllCategory = () => {
         .catch(err=>console.log(err))
     },[])
   return (
-    <div className="flex flex-col justify-center items-center gap-4">
+    <div className="flex flex-col justify-center items-start gap-4">
         {categories.map((category)=>(
-            <div key={category.id}>{category?.category}</div>
+            <p className="uppercase font-bold" key={category.id}>{category?.category}</p>
         ))}
     </div>
   )
