@@ -1,10 +1,12 @@
 import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import QZone from "../../QZone/QZone";
 
 const LeftSide = () => {
   return (
     <div>
+      {/* Log In section  */}
       <div className="w-full space-y-5">
         <h2 className="text-xl font-bold">Login With</h2>
         <div className="w-full space-y-5">
@@ -16,6 +18,7 @@ const LeftSide = () => {
           </button>
         </div>
       </div>
+      {/* Find Us On Section  */}
       <div className="w-full space-y-2 my-5">
         <h2 className="text-xl font-bold">Find Us On</h2>
         <div className="w-full rounded-xl border">
@@ -30,6 +33,9 @@ const LeftSide = () => {
           </button>
         </div>
       </div>
+    <div>
+      <QZone/>
+    </div>
     </div>
   );
 };
