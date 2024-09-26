@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const Advertise = () => {
-  const [ads, setAds] = useState([]);
+  const [ads, setAds] = useState();
   
   useEffect(() => {
     fetch("/ads.json")
@@ -16,7 +16,7 @@ const Advertise = () => {
         Sponsored Ads
       </h2>
       <div className="space-y-4">
-        {ads.map((ad) => (
+        {ads?.map((ad) => (
           <a
             key={ad.id}
             href={ad.link}
