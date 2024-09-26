@@ -12,7 +12,7 @@ const Career = () => {
         <Navbar />
       </div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-yellow-400 to-red-500 text-white py-16 text-center">
+      <section className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16 text-center">
         <h1 className="text-5xl font-bold mb-4">Life at GoromNews</h1>
         <p className="text-lg mb-6">
           At GoromNews, we&#39;re more than just a newsroom. We&#39;re a community of
@@ -45,7 +45,7 @@ const Career = () => {
             </div>
             <div>
               <img
-                src="https://via.placeholder.com/500"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpnX4N8-nljXdMfNxqaeSXjAe8S5rUuRtFlw&s"
                 alt="Culture"
                 className="rounded-lg shadow-md"
               />
