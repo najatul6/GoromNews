@@ -2,6 +2,7 @@ import { FaInstagram, FaTwitter } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import QZone from "../../QZone/QZone";
+import Advertise from "../../Advertise/Advertise";
 
 const LeftSide = () => {
   return (
@@ -33,9 +34,8 @@ const LeftSide = () => {
           </button>
         </div>
       </div>
-    <div>
       <QZone/>
-    </div>
+      <Advertise/>
     </div>
   );
 };
