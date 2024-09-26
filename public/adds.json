@@ -1,42 +1,37 @@
 [
-    {
-      "id": 1,
-      "title": "Tech Gadget Sale",
-      "img": "https://via.placeholder.com/300x250?text=Tech+Sale",
-      "link": "https://example.com/tech-sale",
-      "alt": "Tech Gadget Sale Ad",
-      "description": "Get the latest tech gadgets at discounted prices!"
-    },
-    {
-      "id": 2,
-      "title": "Travel the World",
-      "img": "https://via.placeholder.com/300x250?text=Travel+Ad",
-      "link": "https://example.com/travel",
-      "alt": "Travel the World Ad",
-      "description": "Explore new destinations with our exclusive travel deals."
-    },
-    {
-      "id": 3,
-      "title": "Fitness Gear Discount",
-      "img": "https://via.placeholder.com/300x250?text=Fitness+Ad",
-      "link": "https://example.com/fitness",
-      "alt": "Fitness Gear Ad",
-      "description": "Stay in shape with our top-notch fitness gear at unbeatable prices."
-    },
-    {
-      "id": 4,
-      "title": "Home Improvement Specials",
-      "img": "https://via.placeholder.com/300x250?text=Home+Improvement+Ad",
-      "link": "https://example.com/home-improvement",
-      "alt": "Home Improvement Ad",
-      "description": "Upgrade your home with our home improvement deals!"
-    },
-    {
-      "id": 5,
-      "title": "Luxury Cars for Sale",
-      "img": "https://via.placeholder.com/300x250?text=Luxury+Cars+Ad",
-      "link": "https://example.com/luxury-cars",
-      "alt": "Luxury Cars Ad",
-      "description": "Drive in style with our collection of luxury cars at special prices."
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Tech Gadget Sale",
+    "img": "https://pictures.autods.com/OfficialSite/New/20201103091044/The-Best-10-Trending-Tech-Gadgets-Dropshipping-Products-To-Sell-in-2021.png",
+    "link": "https://najatul-islam.vercel.app/",
+    "alt": "Tech Gadget Sale Ad"
+  },
+  {
+    "id": 2,
+    "title": "Travel the World",
+    "img": "https://t4.ftcdn.net/jpg/00/65/48/25/360_F_65482539_C0ZozE5gUjCafz7Xq98WB4dW6LAhqKfs.jpg",
+    "link": "https://najatul-islam.vercel.app/",
+    "alt": "Travel the World Ad"
+  },
+  {
+    "id": 3,
+    "title": "Fitness Gear Discount",
+    "img": "https://jyotto.com/cdn/shop/products/WhatsAppImage2022-12-19at9.53.09PM_1024x1024.jpg?v=1671467169",
+    "link": "https://najatul-islam.vercel.app/",
+    "alt": "Fitness Gear Ad"
+  },
+  {
+    "id": 4,
+    "title": "Home Improvement Specials",
+    "img": "https://image.seapik.com/template/edit/20240412/sm/simple-gray-home-improvement-special-offer_31624.jpg",
+    "link": "https://najatul-islam.vercel.app/",
+    "alt": "Home Improvement Ad"
+  },
+  {
+    "id": 5,
+    "title": "Luxury Cars for Sale",
+    "img": "https://img.freepik.com/premium-vector/luxury-car-sale-social-media-instagram-post-banner-template_144648-655.jpg",
+    "link": "https://najatul-islam.vercel.app/",
+    "alt": "Luxury Cars Ad"
+  }
+]
