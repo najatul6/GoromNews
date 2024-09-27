@@ -8,7 +8,7 @@ const LogIn = () => {
               Seamless Login for Exclusive Access
             </h2>
             <p className="text-sm mt-6 text-gray-800">Immerse yourself in a hassle-free login journey with our intuitively designed login form. Effortlessly access your account.</p>
-            <p className="text-sm mt-12 text-gray-800">Don't have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">Register here</a></p>
+            <p className="text-sm mt-12 text-gray-800">Don&#39;t have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">Register here</a></p>
           </div>
 
           <form className="max-w-md md:ml-auto w-full">
@@ -18,15 +18,15 @@ const LogIn = () => {
 
             <div className="space-y-4">
               <div>
-                <input name="email" type="email" autocomplete="email" required className="bg-gray-100 w-full text-sm text-gray-800 px-4 py-3.5 rounded-md outline-blue-600 focus:bg-transparent" placeholder="Email address" />
+                <input name="email" type="email" autoComplete="email" required className="bg-gray-100 w-full text-sm text-gray-800 px-4 py-3.5 rounded-md outline-blue-600 focus:bg-transparent" placeholder="Email address" />
               </div>
               <div>
-                <input name="password" type="password" autocomplete="current-password" required className="bg-gray-100 w-full text-sm text-gray-800 px-4 py-3.5 rounded-md outline-blue-600 focus:bg-transparent" placeholder="Password" />
+                <input name="password" type="password" autoComplete="current-password" required className="bg-gray-100 w-full text-sm text-gray-800 px-4 py-3.5 rounded-md outline-blue-600 focus:bg-transparent" placeholder="Password" />
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center">
                   <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
-                  <label for="remember-me" className="ml-3 block text-sm text-gray-800">
+                  <label htmlFor="remember-me" className="ml-3 block text-sm text-gray-800">
                     Remember me
                   </label>
                 </div>
