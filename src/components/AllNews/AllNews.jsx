@@ -29,7 +29,7 @@ const AllNews = () => {
   return (
     <div>
       {/* Display loading spinner or message */}
-      {loading && <div>Loading...</div>}
+      {loading && <div className="text-2xl flex-col flex justify-center items-center">Loading...</div>}
 
       {/* Display error message if there's an error */}
       {error && <div>{error}</div>}
