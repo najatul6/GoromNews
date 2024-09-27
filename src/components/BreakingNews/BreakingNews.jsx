@@ -3,7 +3,6 @@ import Marquee from "react-fast-marquee";
 
 const BreakingNews = () => {
   const [headlines, setHeadlines] = useState([]);
-  console.log(headlines);
 
   useEffect(() => {
     fetch(
