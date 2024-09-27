@@ -36,11 +36,11 @@ const AllNews = () => {
 
       {/* Display news articles in a grid format */}
       {!loading && !error && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-5">
+        <div className="grid grid-cols-1 gap-6 p-5 w-full">
           {news.map((article, index) => (
             <div
               key={index}
-              className="max-w-sm rounded overflow-hidden shadow-lg bg-white"
+              className=" rounded overflow-hidden shadow-lg bg-white w-full"
             >
               <img
                 className="w-full h-48 object-cover"
