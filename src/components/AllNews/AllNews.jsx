@@ -29,10 +29,10 @@ const AllNews = () => {
   return (
     <div>
       {/* Display loading spinner or message */}
-      {loading && <div className="text-2xl flex-col flex justify-center items-center">Loading...</div>}
+      {loading && <div className="text-2xl flex-col flex justify-center items-center min-h-screen">Loading...</div>}
 
       {/* Display error message if there's an error */}
-      {error && <div>{error}</div>}
+      {error && <div className="text-2xl flex-col flex justify-center items-center min-h-screen">{error}</div>}
 
       {/* Display news articles in a grid format */}
       {!loading && !error && (
