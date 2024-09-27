@@ -16,7 +16,9 @@ const Home = () => {
         <div>
           <RightSide />
         </div>
-        <div className="md:col-span-2">News Comming Soon</div>
+        <div className="md:col-span-2">
+          
+        </div>
         <div>
           <LeftSide />
         </div>

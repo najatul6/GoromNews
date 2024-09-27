@@ -3,7 +3,6 @@ import { FaCalendar } from "react-icons/fa";
 
 const HotNews = () => {
   const [news, setNews] = useState([]);
-  console.log(news);
 
   useEffect(() => {
     fetch(

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const AllCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -12,12 +13,18 @@ const AllCategory = () => {
   return (
     <div className="flex flex-col justify-center items-start gap-2">
       {categories.map((category) => (
-        <p
-          className="uppercase font-bold bg-[#E7E7E7] px-5 py-4 w-full rounded-xl text-light-gray hover:text-dark-black"
+        <NavLink
+        to={category.link}
+        className={({ isActive, isPending }) =>
+          isPending
+            ? "pending"
+            : isActive
+            ? "uppercase font-bold bg-[#E7E7E7] px-5 py-4 rounded-xl w-full"
+            : "uppercase px-5 py-4 hover:bg-[#E7E7E7] text-dark-black hover:font-bold w-full rounded-xl "}
           key={category.id}
         >
           {category?.category}
-        </p>
+        </NavLink>
       ))}
     </div>
   );
