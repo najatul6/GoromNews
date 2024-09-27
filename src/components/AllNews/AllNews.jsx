@@ -44,7 +44,7 @@ const AllNews = () => {
             >
               <img
                 className="w-full h-48 object-cover"
-                src={article.urlToImage}
+                src={article.image}
                 alt={article.title}
               />
               <div className="px-6 py-4">
