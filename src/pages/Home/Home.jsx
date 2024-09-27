@@ -1,3 +1,4 @@
+import AllNews from "../../components/AllNews/AllNews";
 import BreakingNews from "../../components/BreakingNews/BreakingNews";
 import Header from "../../components/Shared/Header/Header";
 import LeftSide from "../../components/Shared/LeftSide/LeftSide";
@@ -17,7 +18,7 @@ const Home = () => {
           <RightSide />
         </div>
         <div className="md:col-span-2">
-          
+          <AllNews />
         </div>
         <div>
           <LeftSide />
