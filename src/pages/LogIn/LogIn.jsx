@@ -34,7 +34,7 @@ const LogIn = () => {
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center">
                   <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
-                  <label for="remember-me" className="ml-3 block text-sm text-gray-800">
+                  <label htmlFor="remember-me" className="ml-3 block text-sm text-gray-800">
                     Remember me
                   </label>
                 </div>
@@ -52,7 +52,7 @@ const LogIn = () => {
                 </button>
               </div>
 
-              <p className="text-sm !mt-8 text-center text-gray-800">Don't have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
+              <p className="text-sm !mt-8 text-center text-gray-800">Don&#39;t have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1 whitespace-nowrap">Register here</a></p>
             </form>
           </div>
           <div className="lg:h-[400px] md:h-[300px] max-md:mt-8">
