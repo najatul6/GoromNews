@@ -25,10 +25,6 @@ const Router = createBrowserRouter([
       {
         path: "/career",
         element: <Career />,
-      },
-      {
-        path:"/news/:category",
-        element:<AllNews/>
       }
     ],
   },
