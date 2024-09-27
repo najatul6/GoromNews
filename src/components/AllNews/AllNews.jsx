@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 
 const AllNews = () => {
   const [news, setNews] = useState([]);
-  const [loading, setLoading] = useState(true); // Start with loading = true
-  const [error, setError] = useState(null); // Error state
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
-    setLoading(true); // Set loading to true before fetching
+    setLoading(true); 
     fetch(
       `${
         import.meta.env.VITE_TOP_NEWS_URL
@@ -16,15 +16,15 @@ const AllNews = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setNews(data.articles || []); // Update news state
-        setLoading(false); // Set loading to false once data is fetched
+        setNews(data.articles || []);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching news:", error);
-        setError("Failed to fetch news"); // Set error state if fetching fails
+        setError("Failed to fetch news");
         setLoading(false);
       });
-  }, []); // Fetch news when the component mounts
+  }, []); 
 
   return (
     <div>
