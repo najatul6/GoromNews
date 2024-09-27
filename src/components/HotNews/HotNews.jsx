@@ -14,7 +14,7 @@ const HotNews = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        const topThreeNews = data.articles.slice(0, 4); // Extract only the top 3 articles
+        const topThreeNews = data.articles?.slice(0, 4); // Extract only the top 3 articles
         setNews(topThreeNews); // Set the news into state
       })
       .catch((error) => {
@@ -54,7 +54,7 @@ const HotNews = () => {
                 {article.title}
               </a>
               <p className="text-sm text-gray-500 mt-2">
-                {article.description ? article.description.slice(0, 100) : ""}
+                {article.description ? article.description?.slice(0, 100) : ""}
                 ...
               </p>
               <p className="flex justify-center items-center py-2 gap-2">
