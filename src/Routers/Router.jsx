@@ -6,7 +6,6 @@ import Register from "../pages/Register/Register";
 import Error404 from "../pages/Error404/Error404";
 import About from "../pages/About/About";
 import Career from "../pages/Career/Career";
-import AllNews from "../components/AllNews/AllNews";
 
 const Router = createBrowserRouter([
   {
