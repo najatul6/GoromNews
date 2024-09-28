@@ -2,7 +2,10 @@
 const LogIn = () => {
   const handleSubmit=e=>{
     e.preventDefault();
-     const 
+     const form=e.target
+     const email=form.email.value;
+     const password=form.password.value;
+     console.log(email, password);
   }
   return (
       <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
@@ -43,7 +46,7 @@ const LogIn = () => {
             </div>
 
             <div className="!mt-8">
-              <button type="button" className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+              <button type="submit" className="w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
                 Log in
               </button>
             </div>
