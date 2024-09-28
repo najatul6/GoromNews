@@ -1,15 +1,17 @@
+import Navbar from "../../components/Shared/Navbar/Navbar"
 
 const Register = () => {
   const handleSubmit=e=>{
     e.preventDefault()
-    const formData= e.target 
-    const email=formData.email.value
-    const password=formData.password.value
-    const passwordConfirm=formData.passwordConfirm.value
-    console.log(email,password,passwordConfirm);
+    const form= new FormData(e.currentTarget)
+    const email=form.get('email')
+    const password=form.get('password')
+    console.log(email,password);
   }
   return (
-    <div className="font-[sans-serif] bg-gray-50 flex items-center md:h-screen p-4">
+   <div>
+    <Navbar/>
+     <div className="font-[sans-serif] bg-gray-50 flex items-center md:h-screen p-4">
       <div className="w-full max-w-4xl max-md:max-w-xl mx-auto">
         <div className="bg-white grid md:grid-cols-2 gap-16 w-full sm:p-8 p-6 shadow-md rounded-md overflow-hidden">
           <div className="max-md:order-1 space-y-6">
@@ -123,6 +125,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+   </div>
   )
 }
 

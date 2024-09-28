@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Navbar from "../../components/Shared/Navbar/Navbar";
+
 const LogIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -7,7 +10,9 @@ const LogIn = () => {
     console.log(email, password);
   };
   return (
-    <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
+    <div>
+      <Navbar/>
+      <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
       <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
         <div>
           <h2 className="lg:text-5xl text-4xl font-extrabold lg:leading-[55px] text-gray-800">
@@ -19,12 +24,12 @@ const LogIn = () => {
           </p>
           <p className="text-sm mt-12 text-gray-800">
             Don&#39;t have an account{" "}
-            <a
-              href="javascript:void(0);"
+            <Link
+              to="/register"
               className="text-blue-600 font-semibold hover:underline ml-1"
             >
               Register here
-            </a>
+            </Link>
           </p>
         </div>
 
@@ -71,7 +76,6 @@ const LogIn = () => {
               </div>
               <div className="text-sm">
                 <a
-                  href="jajvascript:void(0);"
                   className="text-blue-600 hover:text-blue-500 font-semibold"
                 >
                   Forgot your password?
@@ -161,6 +165,7 @@ const LogIn = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   );
 };
