@@ -1,5 +1,9 @@
 
 const LogIn = () => {
+  const handleSubmit=e=>{
+    e.preventDefault();
+     const 
+  }
   return (
       <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">
         <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
@@ -11,7 +15,7 @@ const LogIn = () => {
             <p className="text-sm mt-12 text-gray-800">Don&#39;t have an account <a href="javascript:void(0);" className="text-blue-600 font-semibold hover:underline ml-1">Register here</a></p>
           </div>
 
-          <form className="max-w-md md:ml-auto w-full">
+          <form className="max-w-md md:ml-auto w-full" onSubmit={handleSubmit}>
             <h3 className="text-gray-800 text-3xl font-extrabold mb-8">
               Sign in
             </h3>
