@@ -1,5 +1,13 @@
 
 const Register = () => {
+  const handleSubmit=e=>{
+    e.preventDefault()
+    const formData= e.target 
+    const email=formData.email.value
+    const password=formData.password.value
+    const passwordConfirm=formData.passwordConfirm.value
+    console.log(email,password,passwordConfirm);
+  }
   return (
     <div className="font-[sans-serif] bg-gray-50 flex items-center md:h-screen p-4">
       <div className="w-full max-w-4xl max-md:max-w-xl mx-auto">
