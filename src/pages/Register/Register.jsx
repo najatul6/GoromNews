@@ -5,9 +5,10 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
+    const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
+    console.log(name, email, password);
   };
   return (
     <div>
@@ -23,6 +24,7 @@ const Register = () => {
               </div>
 
               <div className="space-y-6">
+                {/* Facebook Register Button  */}
                 <button
                   type="button"
                   className="w-full px-5 py-2.5 flex items-center justify-center rounded-md text-white text-base tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700"
@@ -41,6 +43,8 @@ const Register = () => {
                   </svg>
                   Continue with Facebook
                 </button>
+
+                {/* Google Register Button  */}
                 <button
                   type="button"
                   className="w-full px-5 py-2.5 flex items-center justify-center rounded-md text-gray-800 text-base tracking-wider font-semibold border-none outline-none bg-gray-100 hover:bg-gray-200"
@@ -86,14 +90,14 @@ const Register = () => {
                   Continue with Google
                 </button>
                 <p className="text-gray-800 text-sm mt-6 text-center">
-                Already have an account?{" "}
-                <Link
-                  to="/login"
-                  className="text-blue-600 font-semibold hover:underline ml-1"
-                >
-                  Login here
-                </Link>
-              </p>
+                  Already have an account?{" "}
+                  <Link
+                    to="/login"
+                    className="text-blue-600 font-semibold hover:underline ml-1"
+                  >
+                    Login here
+                  </Link>
+                </p>
               </div>
             </div>
 
@@ -103,6 +107,7 @@ const Register = () => {
               </div>
 
               <div className="space-y-6">
+                {/* Name Field  */}
                 <div>
                   <label className="text-gray-800 text-sm mb-2 block">
                     Name
@@ -135,9 +140,11 @@ const Register = () => {
                     </svg>
                   </div>
                 </div>
+
+                {/* Email Field  */}
                 <div>
                   <label className="text-gray-800 text-sm mb-2 block">
-                    Email Id
+                    Email Address
                   </label>
                   <div className="relative flex items-center">
                     <input
@@ -181,6 +188,8 @@ const Register = () => {
                     </svg>
                   </div>
                 </div>
+
+                {/* Password Field  */}
                 <div>
                   <label className="text-gray-800 text-sm mb-2 block">
                     Password
@@ -207,6 +216,8 @@ const Register = () => {
                     </svg>
                   </div>
                 </div>
+
+                {/* Term Definition Field  */}
                 <div className="flex items-center">
                   <input
                     id="remember-me"
@@ -237,7 +248,6 @@ const Register = () => {
                   Create Account
                 </button>
               </div>
-              
             </form>
           </div>
         </div>
