@@ -242,7 +242,7 @@ const Register = () => {
 
               <div className="!mt-8">
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full py-2.5 px-4 text-sm tracking-wider font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none"
                 >
                   Create Account
