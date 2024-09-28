@@ -55,7 +55,7 @@ const Register = () => {
             </div>
           </div>
 
-          <form className="w-full">
+          <form className="w-full" onSubmit={handleSubmit}>
             <div className="mb-8">
               <h3 className="text-gray-800 text-2xl font-bold">Register</h3>
             </div>
