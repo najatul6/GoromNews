@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
+  const {loginUser}=useContext(AuthContext)
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -100,7 +103,7 @@ const LogIn = () => {
             </div>
 
             <div className="space-x-6 flex justify-center mt-8">
-              
+
               {/* Google Log Button */}
               <button type="button" className="border-none outline-none">
                 <svg
