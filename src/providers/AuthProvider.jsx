@@ -19,26 +19,9 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   //   Create User
-  const createUser = (email, password,name) => {
+  const createUser = (email, password) => {
     setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        if (userCredential && userCredential.user) {
-          const createdUser = userCredential.user;
-          // Ensure updateProfile only runs if user exists
-          return updateProfile(createdUser, { displayName: name }).then(() => {
-            // Set user state only after updating profile
-            setUser({ ...createdUser, displayName: name });
-          });
-        } else {
-          throw new Error("User creation failed: userCredential is undefined");
-        }
-      })
-      .catch((error) => {
-        console.error("Error creating user:", error);
-        throw error;
-      })
-      .finally(() => setLoading(false));
   };
 
   //   Create User with Google
