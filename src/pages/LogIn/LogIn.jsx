@@ -19,6 +19,7 @@ const LogIn = () => {
       })
       .catch((error) => {
         alert(error.message);
+        console.log(error.code);
       });
   };
   return (
