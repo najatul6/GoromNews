@@ -16,32 +16,37 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   //   Create User
   const createUser = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   //   Create User with Google
   const googleProvider = () => {
+    setLoading(true)
     const provider = new GoogleAuthProvider();
     return signInWithPopup(auth, provider);
   };
 
   // Create User with Facebook
   const facebookProvider = () => {
+    setLoading(true)
     const provider = new FacebookAuthProvider();
     return signInWithPopup(auth, provider);
   };
 
   //Log in User
   const loginUser = (email, password) => {
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password)
     
   };
 
   //   LogOut User
   const logoutUser = () => {
+    setLoading(true)
     return signOut(auth);
   };
 
@@ -52,7 +57,6 @@ const AuthProvider = ({ children }) => {
     });
     return () => {
       unsubscribe();
-      setLoading(true);
     };
   }, []);
   const authInfo = {
