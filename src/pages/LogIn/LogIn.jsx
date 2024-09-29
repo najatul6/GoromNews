@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser,facebookProvider,googleProvider } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +22,16 @@ const LogIn = () => {
         alert(error.message);
         console.log(error.code);
       });
+  };
+
+  // Facebook login  
+  const handleFacebook = () => {
+    facebookProvider()
+  };
+
+  // Google Login 
+  const handleGoogle = () => {
+    googleProvider()
   };
   return (
     <div>
@@ -115,7 +125,7 @@ const LogIn = () => {
 
             <div className="space-x-6 flex justify-center mt-8">
               {/* Google Log Button */}
-              <button type="button" className="border-none outline-none">
+              <button onClick={handleGoogle} type="button" className="border-none outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32px"
@@ -155,7 +165,7 @@ const LogIn = () => {
               </button>
 
               {/* Facebook Log in Button  */}
-              <button type="button" className="border-none outline-none">
+              <button onClick={handleFacebook} type="button" className="border-none outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32px"
