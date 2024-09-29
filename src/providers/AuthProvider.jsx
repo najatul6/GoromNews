@@ -8,7 +8,6 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-  updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 import app from "../firebase/firebase.config";

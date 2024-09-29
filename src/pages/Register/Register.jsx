@@ -10,13 +10,13 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    const name = form.get("name");
+    // const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    createUser(email, password, name)
+    createUser(email, password,)
       .then((result) => {
-        alert("User created successfully");
         console.log(result.user);
+        alert("User created successfully");
         // e.currentTarget.reset()
       })
       .catch((err) => {
