@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
-  const {user}=useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const menu = (
     <>
       <NavLink
@@ -84,12 +84,18 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <Link
-          to="/login"
-          className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center"
-        >
-          Login
-        </Link>
+        {user ? (
+          <button className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center">
+            LogOut
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
