@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-  const {createUser}=useContext(AuthContext)
+  const { createUser } = useContext(AuthContext);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    createUser(email, password,name)
-    .then((result) =>{
-      alert("User created successfully")
-      console.log(result.user);
-      // e.currentTarget.reset()
-    })
-    .catch(err =>{
-      console.error(err);
-      alert("Failed to create user")
-    })
-
+    createUser(email, password, name)
+      .then((result) => {
+        alert("User created successfully");
+        console.log(result.user);
+        // e.currentTarget.reset()
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Failed to create user");
+      });
   };
   return (
     <div>
@@ -211,12 +211,13 @@ const Register = () => {
                   <div className="relative flex items-center">
                     <input
                       name="password"
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       required
                       className="bg-white border border-gray-300 w-full text-sm text-gray-800 pl-4 pr-10 py-2.5 rounded-md outline-blue-500"
                       placeholder="Enter password"
                     />
                     <svg
+                      onClick={() => setShowPassword(!showPassword)}
                       xmlns="http://www.w3.org/2000/svg"
                       fill="#bbb"
                       stroke="#bbb"
@@ -259,7 +260,11 @@ const Register = () => {
                 <button
                   type="submit"
                   disabled={!termsAccepted}
-                  className={`w-full py-2.5 px-4 text-sm tracking-wider font-semibold rounded-md ${termsAccepted ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-300'} text-white focus:outline-none`}
+                  className={`w-full py-2.5 px-4 text-sm tracking-wider font-semibold rounded-md ${
+                    termsAccepted
+                      ? "bg-blue-600 hover:bg-blue-700"
+                      : "bg-gray-300"
+                  } text-white focus:outline-none`}
                 >
                   Create Account
                 </button>
