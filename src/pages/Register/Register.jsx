@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,facebookProvider,googleProvider } = useContext(AuthContext);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = (e) => {
@@ -24,6 +24,17 @@ const Register = () => {
         alert("Failed to create user");
       });
   };
+
+  // Facebook login  
+  const handleFacebook = () => {
+    facebookProvider()
+  };
+
+  // Google Login 
+  const handleGoogle = () => {
+    googleProvider()
+  };
+
   return (
     <div>
       <Navbar />
@@ -41,6 +52,7 @@ const Register = () => {
                 {/* Facebook Register Button  */}
                 <button
                   type="button"
+                  onClick={handleFacebook}
                   className="w-full px-5 py-2.5 flex items-center justify-center rounded-md text-white text-base tracking-wider font-semibold border-none outline-none bg-blue-600 hover:bg-blue-700"
                 >
                   <svg
@@ -61,6 +73,7 @@ const Register = () => {
                 {/* Google Register Button  */}
                 <button
                   type="button"
+                  onClick={handleGoogle}
                   className="w-full px-5 py-2.5 flex items-center justify-center rounded-md text-gray-800 text-base tracking-wider font-semibold border-none outline-none bg-gray-100 hover:bg-gray-200"
                 >
                   <svg
