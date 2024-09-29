@@ -12,9 +12,10 @@ const LogIn = () => {
     const email = form.get("email");
     const password = form.get("password");
     loginUser(email, password)
-      .then(() => {
+      .then((result) => {
         e.target.reset();
         navigate("/");
+        console.log(result.user);
         alert("User logged in successfully");
       })
       .catch((error) => {
