@@ -1,16 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
-  const {loginUser}=useContext(AuthContext)
+  const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
+    loginUser(email, password)
+      .then(() => {
+        e.target.reset();
+        navigate("/");
+        alert("User logged in successfully");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <div>
@@ -103,7 +112,6 @@ const LogIn = () => {
             </div>
 
             <div className="space-x-6 flex justify-center mt-8">
-
               {/* Google Log Button */}
               <button type="button" className="border-none outline-none">
                 <svg
