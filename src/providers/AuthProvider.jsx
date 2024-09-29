@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 import app from "../firebase/firebase.config";
@@ -18,9 +19,18 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   //   Create User
-  const createUser = (email, password) => {
+  const createUser = (email, password,name) => {
     setLoading(true)
-    return createUserWithEmailAndPassword(auth, email, password);
+    return createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        const createdUser = userCredential.user;
+        return updateProfile(createdUser, {
+          displayName: name, 
+        }).then(() => {
+          setUser({ ...createdUser, displayName:name }); 
+        });
+      })
+      .finally(() => setLoading(false));
   };
 
   //   Create User with Google
