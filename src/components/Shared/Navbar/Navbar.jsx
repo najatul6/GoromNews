@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user,logoutUser } = useContext(AuthContext);
   const menu = (
     <>
       <NavLink
@@ -85,7 +85,7 @@ const Navbar = () => {
           </div>
         </div>
         {user ? (
-          <button className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center">
+          <button onClick={()=>logoutUser()} className="py-3 px-10 duration-300 bg-zinc-200 hover:bg-zinc-400 font-semibold  text-center">
             LogOut
           </button>
         ) : (
