@@ -28,11 +28,26 @@ const Register = () => {
   // Facebook login  
   const handleFacebook = () => {
     facebookProvider()
+    .then(()=>{
+      console.log("User signed in with Facebook!");
+    })
+     .catch((error) => {
+        console.log(error);
+        alert("Failed to authenticate with Facebook");
+      });
   };
 
   // Google Login 
   const handleGoogle = () => {
     googleProvider()
+    .then(()=>{
+      console.log("User signed in with Google!");
+      alert("User signed")
+    })
+     .catch((error) => {
+        console.log(error);
+        alert("Failed to authenticate with Google");
+      });
   };
 
   return (
