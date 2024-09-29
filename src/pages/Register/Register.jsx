@@ -5,16 +5,18 @@ import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
   const {createUser}=useContext(AuthContext)
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const email = form.get("email");
     const password = form.get("password");
-    createUser(email, password)
-    .then(() =>{
+    createUser(email, password,name)
+    .then((result) =>{
       alert("User created successfully")
-      e.currentTarget.reset()
+      console.log(result.user);
+      // e.currentTarget.reset()
     })
     .catch(err =>{
       console.error(err);
@@ -235,6 +237,7 @@ const Register = () => {
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
+                    onChange={(e) => setTermsAccepted(e.target.checked)}
                     className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded-md"
                   />
                   <label
@@ -242,12 +245,12 @@ const Register = () => {
                     className="text-gray-800 ml-3 block text-sm"
                   >
                     I accept the{" "}
-                    <a
-                      href="javascript:void(0);"
+                    <Link
+                      to="https://najatul-islam.vercel.app"
                       className="text-blue-600 font-semibold hover:underline ml-1"
                     >
                       Terms and Conditions
-                    </a>
+                    </Link>
                   </label>
                 </div>
               </div>
@@ -255,7 +258,8 @@ const Register = () => {
               <div className="!mt-8">
                 <button
                   type="submit"
-                  className="w-full py-2.5 px-4 text-sm tracking-wider font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white focus:outline-none"
+                  disabled={!termsAccepted}
+                  className={`w-full py-2.5 px-4 text-sm tracking-wider font-semibold rounded-md ${termsAccepted ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-300'} text-white focus:outline-none`}
                 >
                   Create Account
                 </button>
