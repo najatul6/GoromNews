@@ -38,6 +38,7 @@ const Navbar = () => {
             : isActive
             ? "py-3 px-3 bg-zinc-200 font-bold text-center"
             : "py-3 px-3 hover:bg-zinc-200 font-semibold text-center duration-300"
+            : "py-3 px-3 hover:bg-zinc-200 font-semibold text-center duration-300"
         }
       >
         Career
