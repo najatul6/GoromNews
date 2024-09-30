@@ -32,6 +32,7 @@ const Register = () => {
   const handleFacebook = () => {
     facebookProvider()
     .then(()=>{
+      navigate("/")
       toast.success("User signed in with Facebook!");
     })
      .catch((error) => {
@@ -44,10 +45,12 @@ const Register = () => {
   const handleGoogle = () => {
     googleProvider()
     .then(()=>{
+      navigate("/")
       toast.success("User signed in with Google!");
     })
      .catch((error) => {
         console.log(error);
+        navigate("/register")
         toast.error("Failed to authenticate with Google");
       });
   };
