@@ -17,10 +17,10 @@ const LogIn = () => {
         e.target.reset();
         navigate("/");
         console.log(result.user);
-        alert("User logged in successfully");
+        toast.success("User logged in successfully");
       })
       .catch((error) => {
-        alert(error.message);
+        toast.error(error.message);
         console.log(error.code);
       });
   };
