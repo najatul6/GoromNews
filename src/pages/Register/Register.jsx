@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser,facebookProvider,googleProvider } = useContext(AuthContext);
@@ -16,12 +17,12 @@ const Register = () => {
     createUser(email, password,)
       .then((result) => {
         console.log(result.user);
-        alert("User created successfully");
-        // e.currentTarget.reset()
+        e.target.reset()
+        toast.success("User created successfully");
       })
       .catch((err) => {
         console.error(err);
-        alert("Failed to create user");
+        toast.error("Failed to create user");
       });
   };
 
