@@ -10,7 +10,12 @@ import "./index.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <ToastContainer />
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        theme="colored"
+        transition:Bounce
+      />
       <RouterProvider router={Router} />
     </AuthProvider>
   </StrictMode>
