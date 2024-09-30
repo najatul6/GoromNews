@@ -30,11 +30,11 @@ const Register = () => {
   const handleFacebook = () => {
     facebookProvider()
     .then(()=>{
-      console.log("User signed in with Facebook!");
+      toast.success("User signed in with Facebook!");
     })
      .catch((error) => {
         console.log(error);
-        alert("Failed to authenticate with Facebook");
+        toast.error("Failed to authenticate with Facebook");
       });
   };
 
