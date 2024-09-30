@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -8,6 +8,7 @@ const Register = () => {
   const { createUser,facebookProvider,googleProvider } = useContext(AuthContext);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate=useNavigate(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -18,6 +19,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         e.target.reset()
+        navigate("/login")
         toast.success("User created successfully");
       })
       .catch((err) => {
