@@ -24,6 +24,7 @@ const Register = () => {
       })
       .catch((err) => {
         console.error(err);
+        navigate("/register")
         toast.error("Failed to create user");
       });
   };
@@ -37,6 +38,7 @@ const Register = () => {
     })
      .catch((error) => {
         console.log(error);
+        navigate("/register")
         toast.error("Failed to authenticate with Facebook");
       });
   };
