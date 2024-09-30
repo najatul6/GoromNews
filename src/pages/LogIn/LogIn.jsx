@@ -39,6 +39,12 @@ const LogIn = () => {
   // Google Login 
   const handleGoogle = () => {
     googleProvider()
+    .then(() => {
+      toast.success("User Login Success with Google")
+    })
+    .catch(() => {
+      toast.error("Failed to authenticate with Google")
+    });
   };
   return (
     <div>
