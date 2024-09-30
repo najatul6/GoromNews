@@ -42,12 +42,11 @@ const Register = () => {
   const handleGoogle = () => {
     googleProvider()
     .then(()=>{
-      console.log("User signed in with Google!");
-      alert("User signed")
+      toast.success("User signed in with Google!");
     })
      .catch((error) => {
         console.log(error);
-        alert("Failed to authenticate with Google");
+        toast.error("Failed to authenticate with Google");
       });
   };
 
