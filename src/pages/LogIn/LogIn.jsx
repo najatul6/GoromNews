@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const LogIn = () => {
   const { loginUser,facebookProvider,googleProvider } = useContext(AuthContext);
@@ -27,6 +28,12 @@ const LogIn = () => {
   // Facebook login  
   const handleFacebook = () => {
     facebookProvider()
+    .then(() => {
+      toast.success("User Login Success")
+    })
+    .catch(() => {
+      toast.error("Failed to authenticate with Facebook")
+    });
   };
 
   // Google Login 
