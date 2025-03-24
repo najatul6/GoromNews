@@ -38,7 +38,7 @@ const Footer = () => {
         </fieldset>
       </form>
       <p>
-        All rights reserved. &copy; 2024. Made by <a className="https://najatul-islam.vercel.app/">Md Najatul islam</a> with ❤.
+        All rights reserved. &copy; 2024. Made by <a href="https://najatul-islam.vercel.app/" className="hover:underline">Md Najatul islam</a> with ❤.
       </p>
     </footer>
   );
